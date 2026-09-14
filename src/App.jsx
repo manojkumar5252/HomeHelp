@@ -516,6 +516,8 @@ function App() {
           element={<AdminWorkers />}
         />
 
+        <Route path="/" element={<CustomerLogin />} />
+
 <Route path="/admin-profile" element={<AdminProfile />} />
 
         {/* =================================
