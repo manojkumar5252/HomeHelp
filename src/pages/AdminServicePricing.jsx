@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import API_URL from "../api";
 
 function AdminServicePricing() {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ function AdminServicePricing() {
     const fetchPricing = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/pricing"
+          `${API_URL}/api/pricing`
         );
 
         if (!response.ok) {
@@ -73,13 +74,13 @@ function AdminServicePricing() {
       setSaving(true);
 
       const currentPricingResponse = await fetch(
-        "http://localhost:5000/api/pricing"
+        `${API_URL}/api/pricing`
       );
 
       const currentPricing = await currentPricingResponse.json();
 
       const response = await fetch(
-        "http://localhost:5000/api/pricing",
+        `${API_URL}/api/pricing`,
         {
           method: "PUT",
           headers: {

@@ -59,7 +59,7 @@ function AdminDashboard() {
         setStatsError("");
 
         const response = await fetch(
-          "http://localhost:5000/api/admin/dashboard-stats"
+          `${API_URL}/api/admin/dashboard-stats`
         );
 
         const data = await response.json();

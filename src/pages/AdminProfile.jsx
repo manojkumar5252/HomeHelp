@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import API_URL from "../api";
 
 function AdminProfile() {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ function AdminProfile() {
     const loadProfile = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/admin/${adminId}`
+          `${API_URL}/api/admin/${adminId}`
         );
 
         const data = await response.json();
@@ -90,7 +91,7 @@ function AdminProfile() {
       setRemovingAdminId(admin._id);
 
       const response = await fetch(
-        `http://localhost:5000/api/admin/admins/${admin._id}`,
+        `${API_URL}/api/admin/admins/${admin._id}`,
         {
           method: "DELETE",
           headers: {
