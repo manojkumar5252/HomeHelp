@@ -45,6 +45,7 @@ import AdminWorkers from "./pages/AdminWorkers";
 import AdminBookings from "./pages/AdminBookings";
 import AdminCreateAdmin from "./pages/AdminCreateAdmin";
 import AdminProfile from "./pages/AdminProfile";
+import RoleSelection from "./pages/RoleSelection";
 
 // ===============================
 // SESSION TIMEOUT
@@ -516,7 +517,7 @@ function App() {
           element={<AdminWorkers />}
         />
 
-        <Route path="/" element={<CustomerLogin />} />
+        <Route path="/" element={<RoleSelection  />} />
 
 <Route path="/admin-profile" element={<AdminProfile />} />
 
